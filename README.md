@@ -7,6 +7,8 @@
 
 > Ce paquetage a été conçu pour rageMP sur la plateforme Naskot, il a été ré-écrit pour AltV, précisement les fonctions puisque la base de code est quasiment la meme
 
+> Des bugs pouvant être présent, merçi d'utiliser les ISSUES sur Git en ayant bien observé qu'une meme issue n'etant deja pas signalé
+
 > **En cours de développement, projet non terminé**
 
 ----------
@@ -33,9 +35,9 @@
 ----------
 
 ## Auteur
-Le code a été écrit par Julien J. en JavaScript, les fonctions utilisés et les natives ont été conçu par leur propriétaires respectifs, à savoir Rockstar pour les natives de GTA5, puis AltV pour les fonctions et les pools de données.
+Le code a été écrit par Julien J. en JavaScript, les attributs et methodes utilisées ainsi que les natives ont été conçu par leurs propriétaires respectifs, à savoir Rockstar pour les natives de GTA5, et AltV pour les attributs, methodes et pools de données.
 
-Ce code est issu du développement réalisé sur la plateforme Naskot sur RageMP, ce code a été écrit le 8 aout 2019.
+Ce code est issu du développement réalisé sur la plateforme Naskot développé sur RageMP, ce code a été écrit le 8 aout 2019.
 
 Vous pouvez me contacter via un discord de projets 
 [discord.gg/257rUb9](https://discord.gg/257rUb9)
