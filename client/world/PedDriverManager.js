@@ -22,7 +22,7 @@ class PedDriverManager {
   }
 
   checkPeds() {
-    alt.emitServer('console.log', JSON.stringify(this.streamPedsList))
+    // alt.emitServer('console.log', JSON.stringify(this.streamPedsList))
     for (const ped of this.streamPedsList) {
       if (native.isPedInAnyVehicle(ped, false)) continue
       if (native.getEntityHealth(ped) === 0) {
