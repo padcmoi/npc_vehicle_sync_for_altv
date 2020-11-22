@@ -1,7 +1,6 @@
 import alt from 'alt'
 
 import Utils from './Utils.mjs'
-import VehicleCreator from './VehicleCreator.mjs'
 import VehicleNPCShapeManager from './VehicleNPCShapeManager.mjs'
 import spawnPoints from '../data/spawnPoints.mjs'
 import { randomPed, randomVehicleAndPed } from './RandomVehicleAndPed.mjs'
@@ -52,9 +51,6 @@ class VehicleNPCManager {
       for (let i = 0; i < parseInt(this.npcNumber); i++) {
         this.spawnNPC(-1, 0, true)
       }
-      alt.logWarning(
-        'VehicleNPCManager: ' + alt.Vehicle.all.length + ' vehicles'
-      )
     }, 1000)
   }
 
@@ -108,7 +104,8 @@ class VehicleNPCManager {
       ? vehicleAndPed['forceColor']
       : Utils.getRandomInt(0, 161)
 
-    new VehicleCreator(
+    alt.emit(
+      'VehicleNPCCreator',
       vehicleAndPed['vehicle'] || 'infernus',
       coord.x,
       coord.y,
