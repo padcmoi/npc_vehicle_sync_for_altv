@@ -54,7 +54,7 @@ class PedDriverManager {
     const groupId = native.createGroup(0)
     native.setGroupFormation(groupId, 1)
 
-    alt.emitServer('console.log', groupId + ' group created')
+    // alt.emitServer('console.log', groupId + ' group created')
     for (const pedObject of pedsObjects) {
       this.loadPed(pedObject['model'])
 
@@ -137,5 +137,5 @@ alt.on('gameEntityDestroy', (entity) => {
   pedDriverManager.destroy(entity)
 })
 alt.onServer('NPCVehicle.vehicleStolen', (entity) => {
-  // pedDriverManager.stolen(entity)
+  pedDriverManager.stolen(entity)
 })

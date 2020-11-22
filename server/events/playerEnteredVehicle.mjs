@@ -13,7 +13,7 @@ import vehicleNPCManager from '../constructor/VehicleNPCManager.mjs'
 function playerEnteredVehicle(player, vehicle, seat) {
   if (!player || !player.isConnect) return
   if (vehicle.hasStreamSyncedMeta('NPCVehicle')) {
-    vehicle.setNetOwner(player, true)
+    vehicle.setNetOwner(player, false)
     vehicle.setStreamSyncedMeta(
       'WasNPCVehicle',
       JSON.stringify(vehicle.getStreamSyncedMeta('NPCVehicle'))
