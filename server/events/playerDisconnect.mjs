@@ -20,8 +20,6 @@ function playerDisconnect(player, reason) {
   //   }
   // }
   // NPCVehicle
-
-  alt.log('Disconnect ' + player.socialId + ' has ' + reason)
 }
 
 alt.on('playerDisconnect', playerDisconnect)
