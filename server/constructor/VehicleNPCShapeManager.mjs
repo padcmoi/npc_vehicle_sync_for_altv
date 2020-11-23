@@ -36,7 +36,8 @@ class VehicleNPCShapeManager {
       shape.dimension = 0
       shape.is = 'spawnNpcVehicle'
       shape.pointId = parseInt(index)
-      shape.hasEntity = false
+      shape.hasEntity = 0
+      shape.serverInit = false // Au boot 1 entité va créer 2 entités, dans le leaveShape on retira -1 entité supplémentaire uniquement 1 fois
 
       this.shapeList.push(shape)
     }
@@ -57,13 +58,15 @@ class VehicleNPCShapeManager {
       if (shape.pointId != parseInt(id)) continue
 
       // atBoot
-      if (atBoot && !shape.hasEntity) {
-        shape.hasEntity = true
+      if (atBoot && shape.hasEntity === 0) {
+        shape.hasEntity += 1
+        shape.serverInit = true
         return true
       }
       // atBoot
 
-      return !shape.hasEntity // on retourne l'opposé pour être cohérent avec le nom de la methode
+      // return !shape.hasEntity // on retourne l'opposé pour être cohérent avec le nom de la methode
+      return shape.hasEntity > 0 ? false : true
     }
     return false
   }

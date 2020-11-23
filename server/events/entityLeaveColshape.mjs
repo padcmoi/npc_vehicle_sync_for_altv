@@ -12,7 +12,19 @@ import alt from 'alt'
  */
 function entityLeaveColshape(shape, entity) {
   if (!shape || shape.is !== 'spawnNpcVehicle') return
-  shape.hasEntity = false
+
+  if (shape.hasEntity > 0) {
+    shape.hasEntity -= 1
+  }
+
+  // Au boot 1 entité va créer 2 entités, dans le leaveShape on retira -1 entité supplémentaire uniquement 1 fois
+  if (shape.serverInit) {
+    shape.serverInit = false
+    if (shape.hasEntity > 0) {
+      shape.hasEntity -= 1
+    }
+  }
+  // Au boot 1 entité va créer 2 entités, dans le leaveShape on retira -1 entité supplémentaire uniquement 1 fois
 }
 
 alt.on('entityLeaveColshape', entityLeaveColshape)

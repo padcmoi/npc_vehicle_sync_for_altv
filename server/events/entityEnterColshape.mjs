@@ -12,7 +12,10 @@ import alt from 'alt'
  */
 function entityEnterColshape(shape, entity) {
   if (!shape || shape.is !== 'spawnNpcVehicle') return
-  shape.hasEntity = true
+
+  if (shape.hasEntity >= 0) {
+    shape.hasEntity += 1
+  }
 }
 
 alt.on('entityEnterColshape', entityEnterColshape)
