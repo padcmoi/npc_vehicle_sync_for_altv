@@ -1,4 +1,4 @@
-# NPCVehicleSync with pedDriver [AltV/JS]
+# NPCVehicleSync with pedDriver [AltV/JS] [Déprécié]
 
 
 > #### Véhicules PNJ style citizen synchronisés pour AltV / GTA V
